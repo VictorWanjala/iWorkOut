@@ -14,11 +14,13 @@ function Home() {
                 <p>Yoga</p>
                 <p>Weights</p>
                 <p>Insanity</p>
+                <br /><br />
             
-                <h3>Subscriptions</h3>
+            <h3>Subscriptions</h3>
                 <p>Daily - Ksh 100</p>
                 <p>Weekly - Ksh 500</p>
                 <p>Monthly - Ksh 2500</p>
+                <br /><br />
             
             <h3>Contacts</h3>
                  <p>Phone: 254700794573</p>

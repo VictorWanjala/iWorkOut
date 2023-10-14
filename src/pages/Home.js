@@ -1,6 +1,11 @@
 import React from 'react'
 import WorkoutImage from '../assets/workout.jpg'
 import '../styles/Home.css'
+import {FaTwitter} from 'react-icons/fa';
+import {FaFacebookF} from 'react-icons/fa';
+import {FaInstagram} from 'react-icons/fa';
+import {FaLinkedin} from 'react-icons/fa';
+
 
 
 function Home() {
@@ -25,6 +30,11 @@ function Home() {
             <h3>Contacts</h3>
                  <p>Phone: 254700794573</p>
                  <p>Email: wanjala94vic@gmail.com</p>
+                 <br /><br />
+
+                 <div className='socialMedia'>
+                      <FaTwitter/> <FaFacebookF/> <FaInstagram/> <FaLinkedin/>
+                </div>
         </div>
     </div>
   )

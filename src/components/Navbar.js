@@ -9,16 +9,14 @@ function Navbar() {
         <div className='leftSide'>
         <img src={Logo}/>
         <div className='hiddenLinks'>
-            <Link to="/Login">Login</Link>
-            <Link to="/Register">Register</Link>
+            <Link to="/Register">Register/Login</Link>
         </div>
         </div>
        
         <div className='rightSide'>
             <Link to="/">Home</Link>
             <Link to="/About">About</Link>
-            <Link to="/Login">Login</Link>
-            <Link to="/Register">Register</Link>
+            <Link to="/Register">Register/Login</Link>
            
             
         </div>

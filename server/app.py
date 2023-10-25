@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, make_response
+from flask import Flask, request, jsonify, make_response, session
 from flask_migrate import Migrate
 from passlib.hash import sha256_crypt
 from models import Customer, db
@@ -6,8 +6,9 @@ from flask_cors import CORS
 
 app=Flask(__name__)
 
+
 #secrete key for session management
-app.secret_key = 'wanjalavictor'
+app.secret_key = 'wanjala%56victor'
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

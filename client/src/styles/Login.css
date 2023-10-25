@@ -1,0 +1,105 @@
+/* .login styles */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    background-color: #F2F2F2;
+  }
+  
+  /* .header styles */
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 60px; /* Improved padding */
+  }
+  
+  .text {
+    color: #FB5958;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  
+  .underline {
+    width: 61px;
+    height: 6px;
+    background: #FB5958;
+    border-radius: 9px;
+  }
+  
+  /* .inputs styles */
+  .inputs {
+    margin-top: 30px; /* Adjusted margin-top for better spacing */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Center the form */
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column; /* Changed to column layout */
+    width: 450px;
+    padding: 15px;
+    background: #eaeaea;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .input input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #797979;
+    font-size: 18px;
+  }
+  
+  /* .forgot-password styles */
+  .forgot-password {
+    margin-top: 15px;
+    color: #FB5958;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .forgot-password span {
+    color: #FB5958;
+    cursor: pointer;
+  }
+  
+  /* .submit-container styles */
+  .submit-container {
+    display: flex;
+    gap: 20px;
+    margin: 30px auto;
+    justify-content: center; /* Center the buttons */
+  }
+  
+  .submit {
+    width: 180px;
+    height: 50px;
+    color: #fff;
+    background: #FB5958;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .gray {
+    background: #EAEAEA;
+    color: #676767;
+  }
+  

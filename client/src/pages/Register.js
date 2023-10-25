@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import {useNavigate} from 'react-router-dom'
 import '../styles/Register.css';
 
 function Register() {
   const [action, setAction] = useState('Register');
+  const [registrationSuccessful, setRegistrationSuccessful] = useState(false);
+  const navigate = useNavigate();
 
   const initialValues = {
     name: '',
@@ -15,15 +18,9 @@ function Register() {
   const validate = (values) => {
     const errors = {};
 
-    if (action === 'Register') {
-      if (!values.name) {
-        errors.name = 'Name is required';
-      }
-      if (!values.confirmPassword) {
-        errors.confirmPassword = 'Confirm Password is required';
-      }
+    if (!values.name) {
+      errors.name = 'Name is required';
     }
-
     if (!values.email) {
       errors.email = 'Email is required';
     }
@@ -48,7 +45,10 @@ function Register() {
       .then((response) => {
         if (response.status === 201) {
           console.log('Registration successful');
-          setAction('Login');
+          setRegistrationSuccessful(true);
+
+          navigate('/login')
+
         } else {
           response.json().then((data) => {
             console.error('Registration failed:', data.message);
@@ -72,12 +72,10 @@ function Register() {
       <Formik initialValues={initialValues} validate={validate} onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <Form>
-            {action === 'Register' && (
-              <div className="input">
-                <Field type="text" name="name" placeholder="Name" />
-                <ErrorMessage name="name" component="div" className="error-message" />
-              </div>
-            )}
+            <div className="input">
+              <Field type="text" name="name" placeholder="Name" />
+              <ErrorMessage name="name" component="div" className="error-message" />
+            </div>
 
             <div className="input">
               <Field type="email" name="email" placeholder="Email Id" />
@@ -89,44 +87,28 @@ function Register() {
               <ErrorMessage name="password" component="div" className="error-message" />
             </div>
 
-            {action === 'Register' && (
-              <div className="input">
-                <Field type="password" name="confirmPassword" placeholder="Confirm Password" />
-                <ErrorMessage name="confirmPassword" component="div" className="error-message" />
-              </div>
-            )}
-
-            {action === 'Register' ? (
-              <div></div>
-            ) : (
-              <div className="forgot-password">
-                Lost Password? <span>Click Here!</span>
-              </div>
-            )}
+            <div className="input">
+              <Field type="password" name="confirmPassword" placeholder="Confirm Password" />
+              <ErrorMessage name="confirmPassword" component="div" className="error-message" />
+            </div>
 
             <div className="submit-container">
               <button
                 type="submit"
-                className={action === 'Login' ? 'submit gray' : 'submit'}
-                onClick={() => setAction('Register')}
+                className="submit"
                 disabled={isSubmitting}
               >
                 Register
-              </button>
-              <button
-                type="submit"
-                className={action === 'Register' ? 'submit gray' : 'submit'}
-                onClick={() => setAction('Login')}
-                disabled={isSubmitting}
-              >
-                Login
               </button>
             </div>
           </Form>
         )}
       </Formik>
+
+      {registrationSuccessful && <div>Registration Successful!</div>}
     </div>
   );
 }
 
 export default Register;
+

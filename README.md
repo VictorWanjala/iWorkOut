@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# iWorkout Gym Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+iWorkout is a web application built with React, Flask-SQLAlchemy, and Python. It is designed for managing gym memberships, user registration, payments, and workout plans. It includes an admin dashboard for overseeing user information, managing user accounts, and eventually sending direct communications to clients.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Registration**: Users can register and create accounts to access the gym services.
 
-### `npm start`
+- **Payment Processing**: Users can make payments for their gym memberships through the app.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Workout Plans**: Users can view and access their workout plans based on their membership level.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Admin Dashboard**: Admins can access a secure dashboard for managing user details and payment statuses.
 
-### `npm test`
+- **Admin Privileges**: Admins have the authority to add, update, and delete user information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Future Feature**: Admins will be able to send direct communications to clients through the portal.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React (for frontend)
+- Python (for backend)
+- Flask-SQLAlchemy db
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Installation
 
-### `npm run eject`
+1. Clone the repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/yourusername/iworkout-gym-app.git
+cd iworkout-gym-app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
+- Users can register, log in, and make payments for their gym memberships.
+- Users can access their workout plans once they are registered and have an active membership.
+- Admins can log in and access the admin dashboard.
+- Admins can add, update, and delete user details from the dashboard.
+- Future feature: Admins can send communications directly to clients from the portal.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Configuration
+- Configure your Flask-SQLAlchemy and database connection in the backend configuration.
+- Update other settings as necessary in the configuration files.
 
-## Learn More
+## Contributing
+If you'd like to contribute to this project, please follow our contribution guidelines.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## License
+This project is licensed under the MIT License.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##Contact
+For inquiries or support, please contact us at wanjala94vic@gmail.com.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
